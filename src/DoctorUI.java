@@ -48,25 +48,28 @@ public class DoctorUI extends javax.swing.JFrame {
         doctorSecretLabel = new javax.swing.JLabel();
         doctorAnswerLabel = new javax.swing.JLabel();
         doctorPassLabel = new javax.swing.JLabel();
-        doctorConfirmField = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jPasswordField2 = new javax.swing.JPasswordField();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        doctorConfirmLabel = new javax.swing.JLabel();
+        doctorNameField = new javax.swing.JTextField();
+        doctorEmailField = new javax.swing.JTextField();
+        doctorStreetField = new javax.swing.JTextField();
+        doctorPhoneField = new javax.swing.JTextField();
+        doctorHospitalField = new javax.swing.JTextField();
+        doctorEditProfileHeader = new javax.swing.JLabel();
+        doctorSecretField = new javax.swing.JTextField();
+        doctorAnswerField = new javax.swing.JTextField();
+        doctorSubmitButton = new javax.swing.JButton();
+        doctorPassField = new javax.swing.JPasswordField();
+        doctorConfirmField = new javax.swing.JPasswordField();
+        doctorCurrentName = new javax.swing.JLabel();
+        doctorCurrentEmail = new javax.swing.JLabel();
+        doctorCurrentStreetAddress = new javax.swing.JLabel();
+        doctorCurrentPhone = new javax.swing.JLabel();
+        doctorCurrentHospital = new javax.swing.JLabel();
+        doctorCurrentSecret = new javax.swing.JLabel();
+        doctorCurrentAnswer = new javax.swing.JLabel();
+        doctorCurrentCityStateAddress = new javax.swing.JLabel();
+        doctorCityStateField = new javax.swing.JTextField();
+        doctorCurrentCityState = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -124,27 +127,30 @@ public class DoctorUI extends javax.swing.JFrame {
         viewPatientListTabLayout.setHorizontalGroup(
             viewPatientListTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(viewPatientListTabLayout.createSequentialGroup()
-                .addGroup(viewPatientListTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(viewPatientListTabLayout.createSequentialGroup()
-                        .addContainerGap()
+                .addGap(86, 86, 86)
+                .addComponent(nonSeverePatientLabel)
+                .addGap(226, 226, 226)
+                .addComponent(mildlySeverePatientLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(severePatientLabel)
+                .addGap(106, 106, 106))
+            .addGroup(viewPatientListTabLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26))
+            .addGroup(viewPatientListTabLayout.createSequentialGroup()
+                .addGroup(viewPatientListTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, viewPatientListTabLayout.createSequentialGroup()
+                        .addGap(23, 23, 23)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(viewPatientListTabLayout.createSequentialGroup()
+                        .addGap(104, 104, 104)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, viewPatientListTabLayout.createSequentialGroup()
                         .addGap(181, 181, 181)
-                        .addComponent(removePatientButton)
-                        .addGap(174, 174, 174)
-                        .addComponent(addPatientButton, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(viewPatientListTabLayout.createSequentialGroup()
-                        .addGap(72, 72, 72)
-                        .addComponent(nonSeverePatientLabel)
-                        .addGap(138, 138, 138)
-                        .addComponent(mildlySeverePatientLabel)
-                        .addGap(141, 141, 141)
-                        .addComponent(severePatientLabel)))
-                .addContainerGap(120, Short.MAX_VALUE))
+                        .addComponent(removePatientButton)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                .addComponent(addPatientButton, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(190, 190, 190))
         );
 
         viewPatientListTabLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jScrollPane1, jScrollPane2, jScrollPane3});
@@ -156,7 +162,7 @@ public class DoctorUI extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, viewPatientListTabLayout.createSequentialGroup()
                 .addGroup(viewPatientListTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, viewPatientListTabLayout.createSequentialGroup()
-                        .addContainerGap(46, Short.MAX_VALUE)
+                        .addContainerGap(51, Short.MAX_VALUE)
                         .addComponent(severePatientLabel))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, viewPatientListTabLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -207,145 +213,166 @@ public class DoctorUI extends javax.swing.JFrame {
         doctorPassLabel.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         doctorPassLabel.setText("Password");
 
-        doctorConfirmField.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        doctorConfirmField.setText("Confirm Password");
+        doctorConfirmLabel.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        doctorConfirmLabel.setText("Confirm Password");
 
-        jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
-        jLabel9.setText("Edit Doctor Information");
+        doctorEditProfileHeader.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        doctorEditProfileHeader.setText("Edit Doctor Information");
 
-        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButton1.setText("Submit");
+        doctorSubmitButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        doctorSubmitButton.setText("Submit");
 
-        jLabel1.setText("jLabel1");
+        doctorCurrentName.setText("jLabel1");
 
-        jLabel2.setText("jLabel2");
+        doctorCurrentEmail.setText("jLabel2");
 
-        jLabel3.setText("jLabel3");
+        doctorCurrentStreetAddress.setText("jLabel3");
 
-        jLabel4.setText("jLabel4");
+        doctorCurrentPhone.setText("jLabel4");
 
-        jLabel5.setText("jLabel5");
+        doctorCurrentHospital.setText("jLabel5");
 
-        jLabel6.setText("jLabel6");
+        doctorCurrentSecret.setText("jLabel6");
 
-        jLabel7.setText("jLabel7");
+        doctorCurrentAnswer.setText("jLabel7");
+
+        doctorCurrentCityStateAddress.setText("jLabel8");
 
         javax.swing.GroupLayout editProfileTabLayout = new javax.swing.GroupLayout(editProfileTab);
         editProfileTab.setLayout(editProfileTabLayout);
         editProfileTabLayout.setHorizontalGroup(
             editProfileTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(editProfileTabLayout.createSequentialGroup()
-                .addGap(357, 357, 357)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(editProfileTabLayout.createSequentialGroup()
-                .addGap(223, 223, 223)
-                .addGroup(editProfileTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, editProfileTabLayout.createSequentialGroup()
-                .addContainerGap(155, Short.MAX_VALUE)
+                .addGap(155, 155, 155)
                 .addGroup(editProfileTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, editProfileTabLayout.createSequentialGroup()
+                    .addGroup(editProfileTabLayout.createSequentialGroup()
                         .addGroup(editProfileTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(doctorNameLabel)
-                            .addComponent(doctorEmailLabel)
+                            .addGroup(editProfileTabLayout.createSequentialGroup()
+                                .addComponent(doctorAnswerLabel)
+                                .addGap(18, 18, 18)
+                                .addComponent(doctorCurrentAnswer))
                             .addGroup(editProfileTabLayout.createSequentialGroup()
                                 .addComponent(doctorHospitalLabel)
                                 .addGap(18, 18, 18)
-                                .addComponent(jLabel5))
+                                .addComponent(doctorCurrentHospital))
                             .addGroup(editProfileTabLayout.createSequentialGroup()
                                 .addComponent(doctorSecretLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel6))
-                            .addComponent(doctorAnswerLabel)
+                                .addComponent(doctorCurrentSecret))
                             .addComponent(doctorPassLabel)
-                            .addComponent(doctorConfirmField)
-                            .addGroup(editProfileTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, editProfileTabLayout.createSequentialGroup()
-                                    .addComponent(doctorPhoneLabel)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel4))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, editProfileTabLayout.createSequentialGroup()
-                                    .addComponent(doctorAddressLabel)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jLabel3))))
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel7)
-                        .addGap(309, 309, 309)
+                            .addComponent(doctorConfirmLabel)
+                            .addComponent(doctorCurrentCityState)
+                            .addGroup(editProfileTabLayout.createSequentialGroup()
+                                .addComponent(doctorPhoneLabel)
+                                .addGap(18, 18, 18)
+                                .addGroup(editProfileTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(doctorCurrentCityStateAddress)
+                                    .addComponent(doctorCurrentPhone))))
                         .addGroup(editProfileTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextField8, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextField11, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jPasswordField1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPasswordField2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(116, 116, 116))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, editProfileTabLayout.createSequentialGroup()
-                        .addComponent(jLabel9)
-                        .addGap(311, 311, 311))))
+                            .addGroup(editProfileTabLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addGroup(editProfileTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(doctorPassField, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(doctorAnswerField)
+                                    .addComponent(doctorConfirmField, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(editProfileTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(doctorHospitalField)
+                                        .addComponent(doctorPhoneField)
+                                        .addComponent(doctorSecretField)))
+                                .addGap(232, 232, 232))
+                            .addGroup(editProfileTabLayout.createSequentialGroup()
+                                .addGap(309, 309, 309)
+                                .addGroup(editProfileTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(doctorEmailField)
+                                    .addComponent(doctorStreetField)
+                                    .addComponent(doctorNameField, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)
+                                    .addComponent(doctorCityStateField))
+                                .addContainerGap(232, Short.MAX_VALUE))))
+                    .addGroup(editProfileTabLayout.createSequentialGroup()
+                        .addGroup(editProfileTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(editProfileTabLayout.createSequentialGroup()
+                                .addComponent(doctorAddressLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(doctorCurrentStreetAddress))
+                            .addGroup(editProfileTabLayout.createSequentialGroup()
+                                .addGap(202, 202, 202)
+                                .addComponent(doctorSubmitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(editProfileTabLayout.createSequentialGroup()
+                                .addGroup(editProfileTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(doctorNameLabel)
+                                    .addComponent(doctorEmailLabel))
+                                .addGap(23, 23, 23)
+                                .addGroup(editProfileTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(doctorCurrentName)
+                                    .addComponent(doctorCurrentEmail))))
+                        .addContainerGap())))
+            .addGroup(editProfileTabLayout.createSequentialGroup()
+                .addGap(316, 316, 316)
+                .addComponent(doctorEditProfileHeader)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        editProfileTabLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jTextField1, jTextField11, jTextField2, jTextField3, jTextField4, jTextField5, jTextField8});
+        editProfileTabLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {doctorAnswerField, doctorEmailField, doctorHospitalField, doctorNameField, doctorPhoneField, doctorSecretField, doctorStreetField});
 
         editProfileTabLayout.setVerticalGroup(
             editProfileTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(editProfileTabLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(jLabel9)
-                .addGap(50, 50, 50)
+                .addGap(69, 69, 69)
+                .addComponent(doctorEditProfileHeader)
+                .addGap(51, 51, 51)
                 .addGroup(editProfileTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(doctorNameLabel)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
+                    .addComponent(doctorNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(doctorCurrentName))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(editProfileTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(doctorEmailLabel)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
+                    .addComponent(doctorEmailField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(doctorCurrentEmail))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(editProfileTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(doctorAddressLabel)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
+                    .addComponent(doctorStreetField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(doctorCurrentStreetAddress))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(editProfileTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(doctorCurrentCityStateAddress)
+                    .addComponent(doctorCityStateField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(doctorCurrentCityState))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(editProfileTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(doctorPhoneLabel)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
+                    .addComponent(doctorPhoneField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(doctorCurrentPhone))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(editProfileTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(doctorHospitalLabel)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5))
+                    .addComponent(doctorHospitalField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(doctorCurrentHospital))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(editProfileTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(doctorSecretLabel)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
+                    .addComponent(doctorSecretField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(doctorCurrentSecret))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(editProfileTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(doctorAnswerLabel)
-                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7))
+                    .addComponent(doctorAnswerField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(doctorCurrentAnswer))
                 .addGap(6, 6, 6)
                 .addGroup(editProfileTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(doctorPassLabel)
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(doctorPassField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(editProfileTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(doctorConfirmField)
-                    .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(doctorConfirmLabel)
+                    .addComponent(doctorConfirmField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(185, 185, 185))
+                .addComponent(doctorSubmitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(165, 165, 165))
         );
 
-        editProfileTabLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jTextField1, jTextField11, jTextField2, jTextField3, jTextField4, jTextField5, jTextField8});
+        editProfileTabLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {doctorAnswerField, doctorEmailField, doctorHospitalField, doctorNameField, doctorPhoneField, doctorSecretField, doctorStreetField});
 
         DoctorUI.addTab("Edit Profile", editProfileTab);
 
@@ -402,36 +429,39 @@ public class DoctorUI extends javax.swing.JFrame {
     private javax.swing.JTabbedPane DoctorUI;
     private javax.swing.JButton addPatientButton;
     private javax.swing.JLabel doctorAddressLabel;
+    private javax.swing.JTextField doctorAnswerField;
     private javax.swing.JLabel doctorAnswerLabel;
-    private javax.swing.JLabel doctorConfirmField;
+    private javax.swing.JTextField doctorCityStateField;
+    private javax.swing.JPasswordField doctorConfirmField;
+    private javax.swing.JLabel doctorConfirmLabel;
+    private javax.swing.JLabel doctorCurrentAnswer;
+    private javax.swing.JLabel doctorCurrentCityState;
+    private javax.swing.JLabel doctorCurrentCityStateAddress;
+    private javax.swing.JLabel doctorCurrentEmail;
+    private javax.swing.JLabel doctorCurrentHospital;
+    private javax.swing.JLabel doctorCurrentName;
+    private javax.swing.JLabel doctorCurrentPhone;
+    private javax.swing.JLabel doctorCurrentSecret;
+    private javax.swing.JLabel doctorCurrentStreetAddress;
+    private javax.swing.JLabel doctorEditProfileHeader;
+    private javax.swing.JTextField doctorEmailField;
     private javax.swing.JLabel doctorEmailLabel;
+    private javax.swing.JTextField doctorHospitalField;
     private javax.swing.JLabel doctorHospitalLabel;
+    private javax.swing.JTextField doctorNameField;
     private javax.swing.JLabel doctorNameLabel;
+    private javax.swing.JPasswordField doctorPassField;
     private javax.swing.JLabel doctorPassLabel;
+    private javax.swing.JTextField doctorPhoneField;
     private javax.swing.JLabel doctorPhoneLabel;
+    private javax.swing.JTextField doctorSecretField;
     private javax.swing.JLabel doctorSecretLabel;
+    private javax.swing.JTextField doctorStreetField;
+    private javax.swing.JButton doctorSubmitButton;
     private javax.swing.JPanel editProfileTab;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField8;
     private javax.swing.JLabel mildlySeverePatientLabel;
     private javax.swing.JList mildlySeverePatientList;
     private javax.swing.JLabel nonSeverePatientLabel;
