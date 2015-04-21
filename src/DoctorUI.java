@@ -88,6 +88,7 @@ public class DoctorUI extends javax.swing.JFrame {
         patientConfirmField = new javax.swing.JPasswordField();
         patientRemoveButton = new javax.swing.JButton();
         patientAddButton = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.CardLayout());
@@ -455,6 +456,14 @@ public class DoctorUI extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jButton1.setText("Cancel");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout EditPatientPageLayout = new javax.swing.GroupLayout(EditPatientPage);
         EditPatientPage.setLayout(EditPatientPageLayout);
         EditPatientPageLayout.setHorizontalGroup(
@@ -472,7 +481,7 @@ public class DoctorUI extends javax.swing.JFrame {
                     .addGroup(EditPatientPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(EditPatientPageLayout.createSequentialGroup()
                             .addComponent(patientRemoveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGap(99, 99, 99)
                             .addComponent(patientAddButton))
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, EditPatientPageLayout.createSequentialGroup()
                             .addComponent(patientCityStateAddressLabel)
@@ -500,9 +509,13 @@ public class DoctorUI extends javax.swing.JFrame {
                                 .addComponent(patientPassField, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(patientConfirmField, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(344, 344, 344))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EditPatientPageLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(466, 466, 466))
         );
 
-        EditPatientPageLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {patientAddButton, patientRemoveButton});
+        EditPatientPageLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton1, patientAddButton, patientRemoveButton});
 
         EditPatientPageLayout.setVerticalGroup(
             EditPatientPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -548,10 +561,12 @@ public class DoctorUI extends javax.swing.JFrame {
                 .addGroup(EditPatientPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(patientRemoveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(patientAddButton))
-                .addContainerGap(168, Short.MAX_VALUE))
+                .addGap(33, 33, 33)
+                .addComponent(jButton1)
+                .addContainerGap(85, Short.MAX_VALUE))
         );
 
-        EditPatientPageLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {patientAddButton, patientRemoveButton});
+        EditPatientPageLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButton1, patientAddButton, patientRemoveButton});
 
         getContentPane().add(EditPatientPage, "card3");
 
@@ -559,7 +574,80 @@ public class DoctorUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void doctorSubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doctorSubmitButtonActionPerformed
-        
+        invalidPassLabel.setText("");
+        docList = Serialize.deserialize("src/doctor.bin");
+        for(int i = 0; i < docList.size(); i++)	//finds and removes doc from the doc list
+        {
+        	if(docList.get(i).getEmail().equalsIgnoreCase(doc.getEmail()) 
+        			&& docList.get(i).getPassword().equals(doc.getPassword()))
+        	{
+        		docList.remove(i);
+        		break;
+        	}
+        }
+        if(!(doctorNameField.getText().equals("")))
+    	{
+    		doc.setName(doctorNameField.getText());
+    		doctorNameField.setText("");
+    		doctorCurrentName.setText(doc.getname());
+    	}
+    	if(!(doctorEmailField.getText().equals("")))
+    	{
+    		doc.setEmail(doctorEmailField.getText());
+    		doctorEmailField.setText("");
+    		doctorCurrentEmail.setText(doc.getEmail());
+    	}
+    	if(!(doctorAddressField.getText().equals("")))
+    	{
+    		doc.setStreetAddress(doctorAddressField.getText());
+    		doctorAddressField.setText("");
+    		doctorCurrentAddress.setText(doc.getStreetAddress());
+    	}
+    	if(!(doctorPhoneField.getText().equals("")))
+    	{
+    		doc.setPhoneNumber(doctorPhoneField.getText());
+    		doctorPhoneField.setText("");
+    		doctorCurrentPhone.setText(doc.getPhoneNumber());
+    	}
+    	if(!(doctorHospitalField.getText().equals("")))
+    	{
+    		doc.setHospital(doctorHospitalField.getText());
+    		doctorHospitalField.setText("");
+    		doctorCurrentHospital.setText(doc.getHospital());
+    	}
+    	if(!(doctorSecretField.getText().equals("")))
+    	{
+    		doc.setSecret(doctorSecretField.getText());
+    		doctorSecretField.setText("");
+    		doctorCurrentSecret.setText(doc.getSecret());
+    	}
+    	if(!(doctorAnswerField.getText().equals("")))
+    	{
+    		doc.setAnswer(doctorAnswerField.getText());
+    		doctorAnswerField.setText("");
+    		doctorCurrentAnswer.setText(doc.getAnswer());
+    	}
+    	if(!(doctorPassField.getText().equals("")))
+    	{
+    		if(doctorPassField.getText().equals(doctorConfirmField.getText()))
+    		{
+    			doc.setPassword(doctorPassField.getText());
+                        
+    		}
+    		else
+    		{
+                invalidPassLabel.setText("The passwords do not match");
+    		}
+                doctorPassField.setText("");
+                doctorConfirmField.setText("");
+    	}
+    	
+    	docList.add(doc);
+    	Serialize.serialize(docList, "src/doctor.bin");	//re adds the doc to the doc list with
+    													//new information
+    	
+    	
+    	
     }//GEN-LAST:event_doctorSubmitButtonActionPerformed
 
     private void editPatientButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editPatientButtonActionPerformed
@@ -586,6 +674,11 @@ public class DoctorUI extends javax.swing.JFrame {
     private void patientAddButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_patientAddButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_patientAddButtonActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        EditPatientPage.setVisible(false);
+        DoctorUIMain.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -658,6 +751,7 @@ public class DoctorUI extends javax.swing.JFrame {
     private javax.swing.JButton editPatientButton;
     private javax.swing.JLabel editPatientPageHeader;
     private javax.swing.JPanel editProfileTab;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
@@ -686,4 +780,7 @@ public class DoctorUI extends javax.swing.JFrame {
     private javax.swing.JList severePatientList;
     private javax.swing.JPanel viewPatientListTab;
     // End of variables declaration//GEN-END:variables
+ private DefaultListModel listModel = new DefaultListModel();
+    private ArrayList<Doctor> docList; 
 }
+
